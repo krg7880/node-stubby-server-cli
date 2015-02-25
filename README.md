@@ -25,10 +25,10 @@ cli.admin(8001)
 ## Sample Event Payload (Response)
 ```json
 {
-  time: '09:26:47',
-  statusCode: '404',
-  location: 'stubs',
-  path: '/your/awesome/endpoint',
-  message: 'is not a registered endpoint'
+  time: "09:26:47",
+  statusCode: "404",
+  location: "stubs",
+  path: "/your/awesome/endpoint",
+  message: "is not a registered endpoint"
 }
 ```
