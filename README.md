@@ -22,16 +22,17 @@ cli.admin(8001)
   // note events won't be dispatch if muted
 ```
 
-## Sample Event Payload 
-- Request
+## Sample Event.REQUEST Payload 
+```json
 { 
   "time": "10:27:25",
   "method": "GET",
   "location": "stubs",
   "path": "/hello"
 }
+```
 
-- Response
+## Sample Event.RESPONSE Payload 
 ```json
 {
   "time": "09:26:47",
