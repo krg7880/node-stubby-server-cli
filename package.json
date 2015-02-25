@@ -1,0 +1,14 @@
+{
+  "name": "node-stubby-cli",
+  "version": "0.0.1",
+  "description": "Node CLI API for Stubby Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Kirk Gordon <kirk7880@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bufferstream": "^0.6.2"
+  }
+}
