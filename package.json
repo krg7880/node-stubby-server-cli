@@ -1,6 +1,6 @@
 {
   "name": "node-stubby-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node CLI API for Stubby Server",
   "main": "index.js",
   "scripts": {
