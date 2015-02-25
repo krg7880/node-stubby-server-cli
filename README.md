@@ -22,7 +22,7 @@ cli.admin(8001)
   // note events won't be dispatch if muted
 ```
 
-## Sample Event.REQUEST Payload 
+### Sample Event.REQUEST Payload 
 ```json
 { 
   "time": "10:27:25",
@@ -32,7 +32,7 @@ cli.admin(8001)
 }
 ```
 
-## Sample Event.RESPONSE Payload 
+### Sample Event.RESPONSE Payload 
 ```json
 {
   "time": "09:26:47",
