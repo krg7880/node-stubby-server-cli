@@ -12,7 +12,11 @@ cli.admin(8001)
   .unmute() // enable output
   .start()
   .on(Events.REQUEST, function(data) {
-    cli.stop();
-  }).on(Events.RESPONSE, function(data) {
     console.log(data);
-  });
+  })
+  .on(Events.RESPONSE, function(data) {
+    console.log(data);
+  })
+  .on(Events.LOADED_ROUTE, function(route) {
+    console.log('loaded route', route);
+  })
