@@ -1,0 +1,39 @@
+-  request:
+      url: ^/path/to/something$
+      method: POST
+      headers:
+         authorization: "Basic usernamez:passwordinBase64"
+      post: this is some post data in textual format
+   response:
+      headers:
+         Content-Type: application/json
+      latency: 1000
+      status: 200
+      body: You're request was successfully processed!
+ 
+-  request:
+      url: ^/path/to/anotherThing
+      query:
+         a: anything
+         b: more
+      method: GET
+      headers:
+         Content-Type: application/json
+      post:
+   response:
+      headers:
+         Content-Type: application/json
+         Access-Control-Allow-Origin: "*"
+      status: 204
+      file: path/to/page.html
+ 
+-  request:
+      url: ^/path/to/thing$
+      method: POST
+      headers:
+         Content-Type: application/json
+      post: this is some post data in textual format
+   response:
+      headers:
+         Content-Type: application/json
+      status: 304
