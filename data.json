@@ -2,7 +2,7 @@
    "request": {
      "url": "^/my-api/",
      "method": "GET",
-     "body": "Hello Kirk"
+     "body": "Hello World"
    },
    "response": {
      "status": 200,
