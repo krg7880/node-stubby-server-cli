@@ -42,3 +42,5 @@ cli.admin(8001)
   "message": "is not a registered endpoint"
 }
 ```
+### TODO
+- Write proper tests
