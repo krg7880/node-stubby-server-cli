@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "bufferstream": "^0.6.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "mocha": "^2.2.1"
   }
 }
