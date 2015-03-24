@@ -19,6 +19,11 @@ cli.admin(8001)
     console.log(data);
   });
 
+  // server should be running after this...
+  cli.once('LOADED_ROUTE', function() {
+     next();
+  });
+
   // note events won't be dispatch if muted
 ```
 
