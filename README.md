@@ -48,6 +48,24 @@ cli.admin(8001)
   // note events won't be dispatch if muted
 ```
 
+## Example data file (routes)
+```javascript
+ [{
+   "request": {
+     "url": "^/my-api/",
+     "method": "GET",
+     "body": "Hello World"
+   },
+   "response": {
+     "status": 200,
+     "headers": {
+       "Content-Type": "application/json"
+     },
+     "file": "data.json"
+   }
+ }]
+```
+
 ## Gulp.js Example
 ```javascript
 var gulp = require('gulp');
