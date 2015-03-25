@@ -6,8 +6,7 @@ var cli = new StubbyCLI();
 cli.admin(8001)
   .stubs(8003)
   .tls(8002)
-  .help() // prints the help... note you still chain
-  //.mute() // supress output
+  .help()
   .data(__dirname + '/data.json')
   .unmute() // enable output
   .start()

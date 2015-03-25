@@ -1,6 +1,6 @@
 {
   "name": "node-stubby-server-cli",
-  "version": "0.10.7",
+  "version": "0.11.8",
   "description": "Node module which exposes Stubby Server CLI to node",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "bufferstream": "^0.6.2"
+    "bufferstream": "^0.6.2",
+    "es6-weak-map": "^0.1.2"
   },
   "devDependencies": {
     "gulp": "^3.8.11",

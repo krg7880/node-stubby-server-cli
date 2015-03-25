@@ -2,6 +2,13 @@
 Module which exposes the Stubby Server API interface from node. The API is clean and simple to use. Note that if you
 mute() the client, you cannot get any events so it's NOT recommended to do this.
 
+We also use ES6 weakmaps to make certain properties private, however, a polyfill is included in the event your
+application isn't ES6 ready. Please fork and enhance or file a bug ticket if you notice any issues
+
+```bash
+node --harmony <script>
+```
+
 ## Example usage
 ```javascript
 var cli = new CLI();
