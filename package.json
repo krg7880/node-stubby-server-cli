@@ -1,6 +1,6 @@
 {
   "name": "node-stubby-server-cli",
-  "version": "0.10.1",
+  "version": "0.10.4",
   "description": "Node module which exposes Stubby Server CLI to node",
   "main": "index.js",
   "scripts": {

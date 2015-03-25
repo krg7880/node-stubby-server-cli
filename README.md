@@ -1,5 +1,6 @@
 # node-stubby-server-cli
-Module which exposes the Stubby Server API interface from node.
+| Module which exposes the Stubby Server API interface from node. The API is clean and simple to use.
+| Note that if you mute() the client, you cannot get any events so it's recommended not to do this.
 
 ## Example usage
 ```javascript
@@ -27,7 +28,46 @@ cli.admin(8001)
   // note events won't be dispatch if muted
 ```
 
-### Sample Event.REQUEST Payload 
+## Gulp.js Example
+```javascript
+var gulp = require('gulp');
+var mocha = require('gulp-mocha');
+var StubbyCLI = require('node-stubby-server-cli');
+var cli = new StubbyCLI();
+
+gulp.task('start:stubby', function(next) {
+  cli.admin(<admin port>)
+    .stubs(<stubs port>)
+    .tls(<tls port>)
+    .data(<path to data file>)
+    .unmute()
+    .start();
+
+  // The server should be listening
+  // after this event...
+  cli.once('LOADED_ROUTE', function() {
+    next();
+  });
+});
+
+gulp.task('test', ['start:stubby'], function() {
+  // run your tests after the stub server starts
+});
+
+gulp.task('stop:stubby', ['test'], function(next) {
+  cli.kill();
+  next();
+});
+
+// Default tasks to run
+gulp.task('default', [
+  'start:stubby',
+  'test',
+  'stop:stubby'
+]);
+```
+
+### Event.REQUEST Payload
 ```json
 { 
   "time": "10:27:25",
@@ -37,7 +77,7 @@ cli.admin(8001)
 }
 ```
 
-### Sample Event.RESPONSE Payload 
+### Event.RESPONSE Payload
 ```json
 {
   "time": "09:26:47",
