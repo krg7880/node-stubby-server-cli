@@ -1,6 +1,6 @@
 # node-stubby-server-cli
 Module which exposes the Stubby Server API interface from node. The API is clean and simple to use. Note that if you
-mute() the client, you cannot get any events so it's NOT recommended not to do this.
+mute() the client, you cannot get any events so it's NOT recommended to do this.
 
 ## Example usage
 ```javascript
