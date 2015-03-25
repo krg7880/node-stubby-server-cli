@@ -15,6 +15,10 @@ node --harmony <script>.js
 node <script>.js
 ```
 
+## Installation
+```bash
+npm -i [node-stubby-server-cli](https://www.npmjs.com/package/node-stubby-server-cli)
+
 
 ## Example usage
 ```javascript
