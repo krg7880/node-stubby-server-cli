@@ -5,9 +5,16 @@ mute() the client, you cannot get any events so it's NOT recommended to do this.
 We also use ES6 weakmaps to make certain properties private, however, a polyfill is included in the event your
 application isn't ES6 ready. Please fork and enhance or file a bug ticket if you notice any issues
 
+### ES6
 ```bash
-node --harmony <script>
+node --harmony <script>.js
 ```
+
+### < ES6
+```bash
+node <script>.js
+```
+
 
 ## Example usage
 ```javascript
