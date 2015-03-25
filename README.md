@@ -16,8 +16,10 @@ node <script>.js
 ```
 
 ## Installation
+Install [this module](https://www.npmjs.com/package/node-stubby-server-cli) via npm
+
 ```bash
-npm -i [node-stubby-server-cli](https://www.npmjs.com/package/node-stubby-server-cli)
+npm -i node-stubby-server-cli
 ```
 
 ## Example usage
