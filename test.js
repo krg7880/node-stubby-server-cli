@@ -6,7 +6,6 @@ var cli = new StubbyCLI();
 cli.admin(8001)
   .stubs(8003)
   .tls(8002)
-  .help()
   .data(__dirname + '/data.json')
   .unmute() // enable output
   .start()
@@ -19,3 +18,6 @@ cli.admin(8001)
   .on(Events.LOADED_ROUTE, function(route) {
     console.log('loaded route', route);
   })
+  .on(Events.LISTENING, function() {
+      console.log('Listening');
+    })
