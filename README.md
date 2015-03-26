@@ -83,7 +83,7 @@ gulp.task('start:stubby', function(next) {
 
   // The server should be listening
   // after this event...
-  cli.once('LOADED_ROUTE', function() {
+  cli.once('LISTENING', function() {
     next();
   });
 });
