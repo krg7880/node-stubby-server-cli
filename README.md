@@ -125,5 +125,7 @@ gulp.task('default', [
   "message": "is not a registered endpoint"
 }
 ```
-### TODO
-- Write proper tests
+### Test
+```bash
+npm test
+```
