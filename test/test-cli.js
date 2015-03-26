@@ -6,7 +6,7 @@ var http = require('http');
 var cli = null;
 
 describe('Stubby CLI', function() {
-    it('should emit Events.LISTENING', function(done) {
+    it('should capture Events.LISTENING, Events.REQUEST & Events.DISCONNECTED', function(done) {
         var cli = new StubbyCLI();
         cli.admin(8001)
             .stubs(8003)
