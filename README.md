@@ -41,9 +41,18 @@ cli.admin(8001)
   });
 
   // server should be running after this...
-  cli.once('LOADED_ROUTE', function() {
+  cli.once('LISTENING', function() {
      next();
-  });
+  })
+   .on(Events.REQUEST, function(payload) {
+    // do something
+   })
+   .on(Events.DISCONNECTED, function() {
+     // do something
+   })
+   .on(Events.LOADED_ROUTE, function(data) {
+    // do something
+   })
 
   // note events won't be dispatch if muted
 ```
@@ -83,16 +92,7 @@ gulp.task('start:stubby', function(next) {
 
   cli.once('LISTENING', function() {
     next();
-  })
-  .on(Events.REQUEST, function(payload) {
-
-  })
-  .on(Events.DISCONNECTED, function() {
-
-  })
-  .on(Events.LOADED_ROUTE, function(data) {
-  })
-  .start();
+  }).start();
 });
 
 gulp.task('test', ['start:stubby'], function() {
