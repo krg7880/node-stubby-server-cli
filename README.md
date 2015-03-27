@@ -71,21 +71,28 @@ cli.admin(8001)
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var StubbyCLI = require('node-stubby-server-cli');
-var cli = new StubbyCLI();
+var Events = stubbyCLI.Events;
 
 gulp.task('start:stubby', function(next) {
+  var cli = new StubbyCLI.CLI();
   cli.admin(<admin port>)
     .stubs(<stubs port>)
     .tls(<tls port>)
     .data(<path to data file>)
     .unmute()
-    .start();
 
-  // The server should be listening
-  // after this event...
   cli.once('LISTENING', function() {
     next();
-  });
+  })
+  .on(Events.REQUEST, function(payload) {
+
+  })
+  .on(Events.DISCONNECTED, function() {
+
+  })
+  .on(Events.LOADED_ROUTE, function(data) {
+  })
+  .start();
 });
 
 gulp.task('test', ['start:stubby'], function() {
